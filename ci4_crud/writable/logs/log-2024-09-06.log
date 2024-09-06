@@ -1,0 +1,27 @@
+CRITICAL - 2024-09-06 21:14:47 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\Crud/Inicio::index"
+[Method: GET, Route: /]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Crud/Inicio::index')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('/')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('/')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 21:23:23 --> ErrorException: Undefined variable $item
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\edit.php on line 15.
+ 1 APPPATH\Views\Crud\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\edit.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/edit', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(12): view('Crud/edit')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
