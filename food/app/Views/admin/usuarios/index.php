@@ -93,12 +93,12 @@
                     },
                     success: function (data) {
                         if (data.length < 1) {
-                            var data = {
+                            var data = [
                                 {
                                     label: 'Usuario não encontrado',
                                     value: -1
                                 }
-                            };
+                            ];
                         }
                         response(data); //aqui temos valor no data
                     },
