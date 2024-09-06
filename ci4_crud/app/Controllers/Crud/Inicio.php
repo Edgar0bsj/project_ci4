@@ -18,9 +18,13 @@ class Inicio extends BaseController
     public function index()
     {
         $data = [
-            'var_users' => $this->usuarios->findAll(), //aqui foi jogado todo os dados na variavel users
+            'var_users' => $this->usuarios->orderby('nome')->findAll(), //aqui foi jogado todo os dados na variavel users
         ];
 
+        // findAll()   --trazer todos os regristro
+        // paginate(int)  --trazer uma quantidade especifica de registro
+        // orderby('id')  --ordena
+        
         return view('Crud/consult', $data); //agora a view recebe os dados
     }
 }
