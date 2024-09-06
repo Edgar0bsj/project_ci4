@@ -34,9 +34,42 @@ class Usuarios extends BaseController
             exit('Página não encontrada');
         }
 
-        echo '<pre>';
+        $usuarios = $this->usuarioModel->procurar($this->request->getGet('term'));
+
+        $retorno = [];
+
+        foreach($usuarios as $usuario){
+            $data['id'] = $usuario->id;
+            $data['value'] = $usuario->nome;
+
+            $retorno[] = $data;
+
+        }
+
+        return $this->response->setJSON($retorno);
+
+
         print_r($this->request->getGet());
         exit;
     }
+    
+
+    public function show($id = null){
+        $usuario = $this->buscarUsuarioOu404($id);
+
+
+        dd($usuario);
+
+
+
+    }
+    private function buscarUsuarioOu404(int $id = null){
+        if(!$id || !$usuario = $this->usuarioModel->where('id',$id)->first()) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Não encontramos o usuário $id");
+        }
+
+        return $usuario;
+    }
+
 
 }

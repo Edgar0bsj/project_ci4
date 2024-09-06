@@ -12,7 +12,7 @@ class UsuarioModel extends Model
     protected $returnType       = 'object';
     protected $useSoftDeletes   = true;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['nome','email','telefone'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -43,4 +43,23 @@ class UsuarioModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    /**
+     * Metodo procurar do jquery
+     *  */    
+    public function procurar($term) {
+
+        if ($term == null) {
+            return [];
+    }
+
+    return $this->select('id, nome')
+        ->like('nome',$term)
+        ->get()
+        ->getResult();
+
+    }
+
+
 }
