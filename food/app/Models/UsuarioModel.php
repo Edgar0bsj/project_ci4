@@ -44,6 +44,10 @@ class UsuarioModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+
+    /**
+     * Metodo procurar do jquery
+     *  */    
     public function procurar($term) {
 
         if ($term == null) {
@@ -56,4 +60,6 @@ class UsuarioModel extends Model
         ->getResult();
 
     }
+
+
 }
