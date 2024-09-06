@@ -12,14 +12,14 @@ class UserModel extends Model
     protected $returnType = 'array';
     protected $useSoftDeletes = false;
     protected $protectFields = true;
-    // ---------------------------------------
+    // ----------------------------------------
     protected $allowedFields = [
         'id',
         'nome',
         'descricao',
         'ativo'
     ];
-    // ---------------------------------------
+    // ----------------------------------------
 
 
     protected bool $allowEmptyInserts = false;
