@@ -85,7 +85,7 @@
         $("#query").autocomplete({
             source: function (request, response) {
 
-                $.ajax([
+                $.ajax({
                     url: "<?php echo site_url('admin/usuarios/procurar'); ?>",
                     dataType: "json",
                     data: {
@@ -93,16 +93,16 @@
                     },
                     success: function (data) {
                         if (data.length < 1) {
-                            var data = [
+                            var data = {
                                 {
                                     label: 'Usuario não encontrado',
                                     value: -1
                                 }
-                            ];
+                            };
                         }
                         response(data); //aqui temos valor no data
                     },
-                ]); // fim do ajax
+            }); // fim do ajax
             },
             minLength: 1,
             select: function (event, ui) {
