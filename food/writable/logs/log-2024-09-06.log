@@ -206,3 +206,18 @@ WHERE `usuarios`.`deleted_at` IS NULL', [], false)
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\food\\public\\index.php')
+CRITICAL - 2024-09-06 19:10:03 --> ErrorException: Undefined property: stdClass::$Nome
+[Method: GET, Route: admin/usuarios]
+in APPPATH\Views\admin\usuarios\index.php on line 51.
+ 1 APPPATH\Views\admin\usuarios\index.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Nome', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\food\\app\\Views\\admin\\usuarios\\index.php', 51)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\food\\app\\Views\\admin\\usuarios\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Admin/Usuarios/index', [], true)
+ 5 APPPATH\Controllers\Admin\Usuarios.php(28): view('Admin/Usuarios/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Usuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\food\\public\\index.php')

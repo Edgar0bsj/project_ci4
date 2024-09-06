@@ -28,7 +28,7 @@
             </h4>
 
             <div class="ui-widget">
-                <input id="query" name="query" class="form-control bg-light mb-5">
+                <input id="query" name="query" placeholder="Pesquise um usuario" class="form-control bg-light mb-5">
             </div>
 
 
@@ -48,7 +48,9 @@
                         <?php foreach ($usuarios as $usuario): ?>
                         <tr>
                             <td>
+                                <a href="<?php echo site_url("admin/usuarios/show/$usuario->id");?><?php echo $usuario->nome;?>">
                                 <?php echo $usuario->nome; ?>
+                                </a>
                             </td>
                             <td>
                                 <?php echo $usuario->email; ?>
@@ -77,6 +79,8 @@
 <!----------------------------------->
 
 <?= $this->section('scripts') ?>
+
+<!-----------Jquery auto_complete------------------------->
 <script src="<?php echo site_url('Admin/vendors/auto_complete/jquery-ui.js') ?>"></script>
 <script>
 
