@@ -25,3 +25,18 @@ in APPPATH\Views\Crud\edit.php on line 15.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 22:13:30 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\consult.php on line 25.
+ 1 APPPATH\Views\Crud\consult.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/consult', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(24): view('Crud/consult', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')

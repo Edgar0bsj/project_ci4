@@ -20,17 +20,17 @@
                 </tr>
             </thead>
             <tbody>
-
-                    <tr>
-                        <td>código</td>
-                        <td>nome</td>
-                        <td>descrição</td>
-                        <td>
-                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
-                        </td>
-                    </tr>
-
+                    <?php foreach($var_users as $usuario):?>
+                        <tr>
+                            <td><?= $usuario['id']?></td>
+                            <td><?= $usuario['nome'] ?></td>
+                            <td><?= $usuario['descricao'] ?></td>
+                            <td>
+                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                            </td>
+                        </tr>
+                        <?php endforeach;?>
             </tbody>
         </table>
     </div>
