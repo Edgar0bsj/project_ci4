@@ -9,6 +9,6 @@ class Inicio extends BaseController
 {
     public function index()
     {
-        return view('Crud/edit');
+        return view('Crud/consult');
     }
 }
