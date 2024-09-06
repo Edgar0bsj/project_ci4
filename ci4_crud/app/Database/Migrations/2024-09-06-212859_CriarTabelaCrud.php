@@ -8,7 +8,7 @@ class CriarTabelaCrud extends Migration
 {
     public function up()
     {
-        $this->forge->addField([
+        $this->forge->addField([ //criando tabela
             'id'=>[
                 'type'=> 'INT',
                 'constraint' => 5,
