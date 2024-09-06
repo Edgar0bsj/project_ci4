@@ -1,0 +1,52 @@
+ERROR - 2024-09-06 15:55:38 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Edgar\Documents\GitHub\food\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\food\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'food', 3306, '', 0)
+#1 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Edgar\Documents\GitHub\food\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Edgar\Documents\GitHub\food\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, -1)
+#6 C:\Users\Edgar\Documents\GitHub\food\app\Controllers\Admin\Usuarios.php(22): CodeIgniter\BaseModel->findAll(0, -1)
+#7 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(933): App\Controllers\Admin\Usuarios->index()
+#8 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#9 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Edgar\Documents\GitHub\food\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Edgar\Documents\GitHub\food\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\Edgar\Documents\GitHub\food\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\Edgar\Documents\GitHub\food\system\rewrite.php(44): require_once('C:\\Users\\Edgar\\...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Edgar\Documents\GitHub\food\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Edgar\Documents\GitHub\food\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\Edgar\Documents\GitHub\food\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Edgar\Documents\GitHub\food\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, -1)
+#5 C:\Users\Edgar\Documents\GitHub\food\app\Controllers\Admin\Usuarios.php(22): CodeIgniter\BaseModel->findAll(0, -1)
+#6 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(933): App\Controllers\Admin\Usuarios->index()
+#7 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#8 C:\Users\Edgar\Documents\GitHub\food\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Edgar\Documents\GitHub\food\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Edgar\Documents\GitHub\food\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Edgar\Documents\GitHub\food\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Edgar\Documents\GitHub\food\system\rewrite.php(44): require_once('C:\\Users\\Edgar\\...')
+#13 {main}
+CRITICAL - 2024-09-06 15:55:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+[Method: GET, Route: admin/usuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+WHERE `usuarios`.`deletado_em` IS NULL', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, -1)
+ 5 APPPATH\Controllers\Admin\Usuarios.php(22): CodeIgniter\BaseModel->findAll(0, -1)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Usuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\food\\public\\index.php')
