@@ -1,0 +1,15 @@
+/* Centraliza o formulário de login na página */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-box {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+body {
+    background-color: rgb(88, 87, 87);
+}
