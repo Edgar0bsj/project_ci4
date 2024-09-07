@@ -13,7 +13,6 @@
             padding: 8px 16px;
             text-decoration: none;
         }
-
     </style>
 </head>
 
@@ -37,8 +36,28 @@
                         <td><?= $usuario['nome'] ?></td>
                         <td><?= $usuario['descricao'] ?></td>
                         <td>
-                            <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+                            <!-- a função anchor é pedido 3 argumento -->
+                            <!-- 1º e 2º obrigatorio, 3º opcional -->
+                            <!-- anchor('controller/method', 'Texto exibido', ['class' => 'valor'])-->
+                            <!-- função confirm(str) é uma função nativa do Javascrip-->
+                            <!-- confirm(str) - exibir uma caixa de diálogo retornando true ou false -->
+                            <?php echo anchor(
+                                'Crud/Inicio/' . $usuario['id'],
+                                'Editar',
+                                [
+                                    'onclick' => "return confirm('Deseja Excluir ?')",
+                                    'class' => 'btn btn-warning btn-sm'
+                                ]
+                            ); ?>
+                            <?php echo anchor(
+                                'deletar?id='.$usuario['id'],
+                                'Excluir',
+                                [
+                                    'onclick' => "return confirm('Deseja Excluir ?')",
+                                    'class' => 'btn btn-danger btn-sm'
+                                ]
+                            ); ?>
+                            <!--------------------------------------------------------------------------->
                         </td>
                     </tr>
                 <?php endforeach; ?>
