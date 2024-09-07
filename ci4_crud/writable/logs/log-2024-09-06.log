@@ -1,0 +1,158 @@
+CRITICAL - 2024-09-06 21:14:47 --> CodeIgniter\Router\Exceptions\RouterException: The namespace delimiter is a backslash (\), not a slash (/). Route handler: "\App\Controllers\Crud/Inicio::index"
+[Method: GET, Route: /]
+in SYSTEMPATH\Router\Router.php on line 492.
+ 1 SYSTEMPATH\Router\Router.php(492): CodeIgniter\Router\Exceptions\RouterException::forInvalidControllerName('\\App\\Controllers\\Crud/Inicio::index')
+ 2 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('/')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('/')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 21:23:23 --> ErrorException: Undefined variable $item
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\edit.php on line 15.
+ 1 APPPATH\Views\Crud\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $item', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\edit.php', 15)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/edit', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(12): view('Crud/edit')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 22:13:30 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\consult.php on line 25.
+ 1 APPPATH\Views\Crud\consult.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/consult', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(24): view('Crud/consult', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 22:49:56 --> ErrorException: Undefined variable $paginacao
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\consult.php on line 34.
+ 1 APPPATH\Views\Crud\consult.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginacao', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php', 34)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/consult', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(31): view('Crud/consult', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-06 22:51:12 --> ErrorException: Undefined variable $paginacao
+[Method: GET, Route: /]
+in APPPATH\Views\Crud\consult.php on line 35.
+ 1 APPPATH\Views\Crud\consult.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paginacao', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Views\\Crud\\consult.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Crud/consult', [], true)
+ 5 APPPATH\Controllers\Crud\Inicio.php(31): view('Crud/consult', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+ERROR - 2024-09-06 23:24:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 3' at line 4 in C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(3, -1)
+#6 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\BaseModel.php(1288): CodeIgniter\BaseModel->findAll(3, -1)
+#7 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\app\Controllers\Crud\Inicio.php(21): CodeIgniter\BaseModel->paginate(3)
+#8 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+#9 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+#10 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-09-06 23:24:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 3' at line 4
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(3, -1)
+ 4 SYSTEMPATH\BaseModel.php(1288): CodeIgniter\BaseModel->findAll(3, -1)
+ 5 APPPATH\Controllers\Crud\Inicio.php(21): CodeIgniter\BaseModel->paginate(3)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-06 23:24:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 3' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(3, -1)
+ 6 SYSTEMPATH\BaseModel.php(1288): CodeIgniter\BaseModel->findAll(3, -1)
+ 7 APPPATH\Controllers\Crud\Inicio.php(21): CodeIgniter\BaseModel->paginate(3)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-06 23:24:40 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-1, 3' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`
+ORDER BY `id`
+ LIMIT -1, 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(3, -1)
+ 7 SYSTEMPATH\BaseModel.php(1288): CodeIgniter\BaseModel->findAll(3, -1)
+ 8 APPPATH\Controllers\Crud\Inicio.php(21): CodeIgniter\BaseModel->paginate(3)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
