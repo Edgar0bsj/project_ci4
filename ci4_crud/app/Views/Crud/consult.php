@@ -19,7 +19,7 @@
 <body>
     <div class="container mt-5">
         <h1>Item List</h1>
-        <a href="/crud/create" class="btn btn-success mb-3">Novo item</a>
+        <a href="<?= site_url()."/create" ?>" class="btn btn-success mb-3">Novo item</a>
         <table class="table table-bordered">
             <thead>
                 <tr>

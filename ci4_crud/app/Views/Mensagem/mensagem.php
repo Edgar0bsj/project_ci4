@@ -47,6 +47,7 @@
 <div class="container">
     <h1><?php echo $mensagem;?></h1>
     <button class="btn" onclick="window.history.back();">Voltar</button>
+    <button class="btn" onclick="window.location.href='<?= base_url();?>'">Página Inicial</button>
 </div>
 </body>
 </html>

@@ -33,7 +33,7 @@ class Inicio extends BaseController
 
 
     // -------------------------------------------------------------------------
-// --------------------DELETAR REGISTRO-------------------------------------
+    // --------------------DELETAR REGISTRO-------------------------------------
     public function deletar()
     {
         $id = $_GET['id'];     //Capturando o id
@@ -42,10 +42,36 @@ class Inicio extends BaseController
         if ($this->usuarios->delete($id)) {
             echo view('Mensagem/mensagem', $data);
         } else {
-            $data['mensagem']='ERRO!';
+            $data['mensagem'] = 'ERRO!';
             echo view('Mensagem/mensagem', $data);
             ;
         }
     }
     // -------------------------------------------------------------------------
+
+    // --------------------NOVO REGISTRO-------------------------------------
+    public function criarNovoRegistro()
+    {
+        //**********Criando uma lista com os dados capturados********* */
+        $lista_de_dados = [
+            'nome' => $_POST['user_name'],
+            'descricao' => $_POST['user_description']
+        ];
+        //************************************************************* */
+        //**************Salvando no Banco de dados********************* */        
+        if ($this->usuarios->save($lista_de_dados)) {
+            session()->setFlashdata('sucesso', 'Item excluído com sucesso!');
+
+            return view('Mensagem/mensagem',['mensagem'=>'Item adicionado com sucesso!']);
+        }
+        //************************************************************* */
+
+
+    }
+
+
+
+    // -------------------------------------------------------------------------
+
+
 }
