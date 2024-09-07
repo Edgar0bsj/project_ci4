@@ -42,10 +42,10 @@
                             <!-- função confirm(str) é uma função nativa do Javascrip-->
                             <!-- confirm(str) - exibir uma caixa de diálogo retornando true ou false -->
                             <?php echo anchor(
-                                'Crud/Inicio/' . $usuario['id'],
+                                'editar/' . $usuario['id'],
                                 'Editar',
                                 [
-                                    'onclick' => "return confirm('Deseja Excluir ?')",
+                                    'onclick' => "return confirm('Deseja Editar ?')",
                                     'class' => 'btn btn-warning btn-sm'
                                 ]
                             ); ?>

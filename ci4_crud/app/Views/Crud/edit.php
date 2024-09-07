@@ -9,14 +9,18 @@
 <body>
     <div class="container mt-5">
         <h1>Editar Item</h1>
-        <form action="#" method="post">
+        <form action="<?= site_url()."/editar/$id/true" ?>" method="post">
+            <div class="form-group">
+                <label for="name">ID</label>
+                <input type="text" class="form-control" name="id" value="<?= $id ?>" required disabled>
+            </div>
             <div class="form-group">
                 <label for="name">Nome</label>
-                <input type="text" class="form-control" name="name" value="<?=".."; //$item['name'] ?>" required>
+                <input type="text" class="form-control" name="name" value="<?= $nome ?>" required>
             </div>
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea class="form-control" name="description" required><?=".."; //$item['description'] ?></textarea>
+                <textarea class="form-control" name="description" required><?= $descricao ?></textarea>
             </div>
             <button type="submit" class="btn btn-success">Atualizar</button>
         </form>

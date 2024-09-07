@@ -251,3 +251,61 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
 INFO - 2024-09-07 12:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-07 12:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-09-07 12:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-09-07 14:35:54 --> ErrorException: Array to string conversion
+[Method: GET, Route: editar]
+in APPPATH\Controllers\Crud\Inicio.php on line 74.
+ 1 APPPATH\Controllers\Crud\Inicio.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Controllers\\Crud\\Inicio.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->editar()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-07 14:44:36 --> ArgumentCountError: Too few arguments to function App\Controllers\Crud\Inicio::editar(), 0 passed in C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_crud\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: editar/5]
+in APPPATH\Controllers\Crud\Inicio.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-07 14:49:42 --> ErrorException: Array to string conversion
+[Method: GET, Route: editar/6]
+in APPPATH\Controllers\Crud\Inicio.php on line 73.
+ 1 APPPATH\Controllers\Crud\Inicio.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Controllers\\Crud\\Inicio.php', 73)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Crud\Inicio->editar('6')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud\Inicio))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-07 15:59:17 --> ParseError: syntax error, unexpected variable "$user_data"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud\Inicio.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Controllers\\Crud\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Crud\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Crud\\Inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Crud\\Inicio', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
+CRITICAL - 2024-09-07 15:59:17 --> ParseError: syntax error, unexpected variable "$user_data"
+[Method: GET, Route: /]
+in APPPATH\Controllers\Crud\Inicio.php on line 89.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\app\\Controllers\\Crud\\Inicio.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Crud\\Inicio')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Crud\\Inicio')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\Crud\\Inicio', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_crud\\public\\index.php')
