@@ -15,7 +15,7 @@ class Inicio extends BaseController
         $this->usuarios = new UserModel(); // <<<<---- MODEL
     }
 
-// --------------------VISUALIZAR REGISTROS-------------------------------------
+    // --------------------VISUALIZAR REGISTROS-------------------------------------
 
     public function index()
     {
@@ -32,18 +32,20 @@ class Inicio extends BaseController
     }
 
 
-// -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
 // --------------------DELETAR REGISTRO-------------------------------------
-public function deletar()
-{
-    $id = $_GET['id'];     //Capturando o id
-    $data = ['mensagem' => 'Usuário excluído com sucesso!'];
-    
-    if ($this->usuarios->delete($id)) {
-        echo view('Mensagem/mensagem', $data);
-    } else {
-        echo 'ERRO!';
+    public function deletar()
+    {
+        $id = $_GET['id'];     //Capturando o id
+        $data = ['mensagem' => 'Usuário excluído com sucesso!'];
+
+        if ($this->usuarios->delete($id)) {
+            echo view('Mensagem/mensagem', $data);
+        } else {
+            $data['mensagem']='ERRO!';
+            echo view('Mensagem/mensagem', $data);
+            ;
+        }
     }
-}
-// -------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
 }
