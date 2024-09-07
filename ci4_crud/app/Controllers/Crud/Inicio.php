@@ -15,6 +15,7 @@ class Inicio extends BaseController
         $this->usuarios = new UserModel(); // <<<<---- MODEL
     }
 
+// --------------------VISUALIZAR REGISTROS-------------------------------------
 
     public function index()
     {
@@ -30,20 +31,19 @@ class Inicio extends BaseController
         return view('Crud/consult', $data); //agora a view recebe os dados
     }
 
-    public function deletar()
-    {
-        $id = $_GET['id'];
-        $data = ['mensagem' => 'Usuário excluído com sucesso!'];
 
-        if ($this->usuarios->delete($id)) {
-            echo view('Mensagem/mensagem', $data);
-        } else {
-            echo 'ERRO!';
-        }
-
+// -------------------------------------------------------------------------
+// --------------------DELETAR REGISTRO-------------------------------------
+public function deletar()
+{
+    $id = $_GET['id'];     //Capturando o id
+    $data = ['mensagem' => 'Usuário excluído com sucesso!'];
+    
+    if ($this->usuarios->delete($id)) {
+        echo view('Mensagem/mensagem', $data);
+    } else {
+        echo 'ERRO!';
     }
-
-
-
-
+}
+// -------------------------------------------------------------------------
 }
