@@ -49,4 +49,23 @@ class Noticias extends BaseController
             -> first();
         }
     }
+
+    public function item($id= NULL){
+        $data =['noticias' => $this->getNoticias($id),];
+
+        if(empty($data['noticias'])){
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Não é possivel encontrar a noticia com o ID: '.$id);
+        }
+        $data['title'] = $data['noticias']['titulo'];
+
+        echo view('templates/header', $data);
+        echo view('pages/noticia', $data);
+        echo view('templates/footer');
+    }
+
+
+
+
+
+
 }

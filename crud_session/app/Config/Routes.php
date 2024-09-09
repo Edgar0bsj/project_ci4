@@ -17,6 +17,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('noticias', 'Noticias::index');
+$routes->get('noticias/(:segment)', 'Noticias::item/$1');
 $routes->get('/', 'Pages::mostrar');
 $routes->get('(:any)', 'Pages::mostrar/$1');
 
