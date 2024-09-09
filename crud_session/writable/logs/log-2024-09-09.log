@@ -1,0 +1,136 @@
+CRITICAL - 2024-09-09 16:34:05 --> Error: Class "app\Models\NoticiaModel" not found
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:37:18 --> Error: Class "app\Models\NoticiaModel" not found
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Noticias->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:37:20 --> Error: Class "app\Models\NoticiaModel" not found
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Noticias->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:38:10 --> Error: Call to a member function getNoticias() on null
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:38:12 --> Error: Call to a member function getNoticias() on null
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:39:02 --> Error: Call to a member function getNoticias() on null
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:39:03 --> Error: Call to a member function getNoticias() on null
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:40:43 --> BadMethodCallException: Call to undefined method App\Models\NoticiaModel::getNoticias
+[Method: GET, Route: noticias]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Noticias.php(22): CodeIgniter\Model->__call('getNoticias', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:43:27 --> BadMethodCallException: Call to undefined method App\Models\NoticiaModel::getNoticias
+[Method: GET, Route: noticias]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Noticias.php(22): CodeIgniter\Model->__call('getNoticias', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:47:35 --> BadMethodCallException: Call to undefined method App\Models\NoticiaModel::getNoticias
+[Method: GET, Route: noticias]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Noticias.php(22): CodeIgniter\Model->__call('getNoticias', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:50:16 --> BadMethodCallException: Call to undefined method App\Models\NoticiaModel::getNoticias
+[Method: GET, Route: noticias]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\Noticias.php(18): CodeIgniter\Model->__call('getNoticias', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:55:21 --> ErrorException: Array to string conversion
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 25.
+ 1 APPPATH\Controllers\Noticias.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\app\\Controllers\\Noticias.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
+CRITICAL - 2024-09-09 16:56:15 --> ErrorException: Array to string conversion
+[Method: GET, Route: noticias]
+in APPPATH\Controllers\Noticias.php on line 25.
+ 1 APPPATH\Controllers\Noticias.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\app\\Controllers\\Noticias.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Noticias->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Noticias))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\crud_session\\public\\index.php')
