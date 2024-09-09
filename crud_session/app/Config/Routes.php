@@ -5,7 +5,7 @@ use CodeIgniter\Router\RouteCollection;
 * --------------------------------------------------------------------------
 * rotas com parâmetro
 * --------------------------------------------------------------------------
-* pages/mostrar/(:segment) => para qualquer segmento de URL (números, letras, etc.).
+* pages/mostrar/(:any) => para qualquer segmento de URL (números, letras, etc.).
 * pages/mostrar/(:num) => rota para números.
 *------
 * Pages::mostrar/$1 => $1 diz que vai receber um parâmetro
@@ -17,5 +17,5 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('pages/mostrar', 'Pages::mostrar');
-$routes->get('pages/mostrar/(:segment)', 'Pages::mostrar/$1');
+$routes->get('pages/mostrar/', 'Pages::mostrar');
+$routes->get('pages/mostrar/(:any)', 'Pages::mostrar/$1');
