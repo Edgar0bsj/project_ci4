@@ -1,0 +1,48 @@
+CRITICAL - 2024-09-07 18:07:29 --> CodeIgniter\Router\Exceptions\RouterException: The route for "login.index" cannot be found.
+[Method: GET, Route: /]
+in SYSTEMPATH\Helpers\url_helper.php on line 494.
+ 1 SYSTEMPATH\Helpers\url_helper.php(494): CodeIgniter\Router\Exceptions\RouterException::forInvalidRoute('login.index')
+ 2 APPPATH\Views\Login\index.php(21): url_to('login.index')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_login\\app\\Views\\Login\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Login/index', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('Login/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_login\\public\\index.php')
+CRITICAL - 2024-09-07 18:09:39 --> CodeIgniter\Router\Exceptions\RouterException: Controller or its method is not found: login::index
+[Method: GET, Route: /]
+in SYSTEMPATH\Helpers\url_helper.php on line 491.
+ 1 SYSTEMPATH\Helpers\url_helper.php(491): CodeIgniter\Router\Exceptions\RouterException::forControllerNotFound('login', 'index')
+ 2 APPPATH\Views\Login\index.php(21): url_to('login::index')
+ 3 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_login\\app\\Views\\Login\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('Login/index', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('Login/index')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Edgar\\Documents\\GitHub\\project_ci4\\ci4_login\\public\\index.php')
+ERROR - 2024-09-07 18:46:25 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\app\Database\Migrations\2024-09-07-183951_CriarTabelaLogin.php(32): CodeIgniter\Database\Forge->createTable('t_usuario')
+#5 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\MigrationRunner.php(867): App\Database\Migrations\CriarTabelaLogin->up()
+#6 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\Edgar\Documents\GitHub\project_ci4\ci4_login\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}

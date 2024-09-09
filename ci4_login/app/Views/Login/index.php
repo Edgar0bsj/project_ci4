@@ -18,7 +18,8 @@
     <div class="col-md-4">
         <div class="login-box bg-light">
             <h3 class="text-center mb-4">Login</h3>
-            <form>
+            <form method="post" action="login/">
+                <?php echo csrf_field();?>
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
                     <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
