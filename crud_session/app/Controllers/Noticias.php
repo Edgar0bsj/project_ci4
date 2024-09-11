@@ -87,7 +87,7 @@ class Noticias extends BaseController
         if (empty($data['noticias'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Não é possivel encontrar a noticia com o ID: ' . $id);
         }
-
+        // return dd($data);
         echo view('templates/header', $data);
         echo view('pages/noticias_gravar', $data);
         echo view('templates/footer');
@@ -125,15 +125,12 @@ class Noticias extends BaseController
             echo view('templates/footer');
         }
     }
+    public function excluir($id = NULL){
+        
+        $this->model->delete($id);
 
-    public function teste(){
-        $data = [
-            'id' => $this->request->getVar('id'),
-            'titulo' => $this->request->getVar('titulo'),
-            'autor' => $this->request->getVar('autor'),
-            'descricao' => $this->request->getVar('descricao'),
-        ];
-        dd($data);
+        return redirect('noticias');
+    
     }
 
 

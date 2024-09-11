@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Controllers\Noticias;
 
 class Pages extends BaseController
 {
@@ -38,6 +39,20 @@ class Pages extends BaseController
         echo view('templates/header', $data);
         echo view('pages/'.$page);
         echo view('templates/footer');
+    }
+
+    public function teste($id=null){
+        $controllerNoticias = new Noticias();
+
+        if(!is_null($id)){
+
+            $data = [
+                'title' => 'Editar Notícias',
+                'noticias' => $controllerNoticias->$this->getNoticias($id)
+            ];
+            dd($data);
+
+        }
     }
 
 
