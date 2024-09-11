@@ -41,19 +41,4 @@ class Pages extends BaseController
         echo view('templates/footer');
     }
 
-    public function teste($id=null){
-        $controllerNoticias = new Noticias();
-
-        if(!is_null($id)){
-
-            $data = [
-                'title' => 'Editar Notícias',
-                'noticias' => $controllerNoticias->$this->getNoticias($id)
-            ];
-            dd($data);
-
-        }
-    }
-
-
 }

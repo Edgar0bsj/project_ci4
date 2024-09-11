@@ -14,7 +14,7 @@ class NoticiaModel extends Model
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
+    protected $useSoftDeletes   = true;  // <-- deletar com segurança
     protected $protectFields    = true;
     protected $allowedFields    = ['titulo','descricao','autor'];   // <---- compos que podem sofrer edição
 
@@ -25,11 +25,11 @@ class NoticiaModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $useTimestamps = true;  //<-- importante
+    protected $dateFormat    = 'datetime'; //*
+    protected $createdField  = 'created_at'; //*
+    protected $updatedField  = 'updated_at'; //*
+    protected $deletedField  = 'deleted_at'; //*
 
     // Validation
     protected $validationRules      = [];
