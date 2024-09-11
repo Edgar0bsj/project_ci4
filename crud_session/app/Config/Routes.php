@@ -23,6 +23,7 @@ $routes->match(['get','post'],'noticias/editar/(:num)', 'Noticias::editar/$1');
 // -----------------------------------------------------------------------------------------
 $routes->match(['get','post'],'usuario/login', 'Usuarios::login',['as'=>'logar']);
 $routes->get('login', 'Usuarios::index');
+$routes->get('logout', 'Noticias::logout');
 // -----------------------------------------------------------------------------------------
 $routes->get('noticias', 'Noticias::index');
 $routes->get('noticias/(:segment)', 'Noticias::item/$1');

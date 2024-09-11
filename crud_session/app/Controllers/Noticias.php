@@ -19,6 +19,7 @@ class Noticias extends BaseController
         $data = [
             'title' => 'Últimas notícias',
             'noticias' => $this->getNoticias(),
+            'session' => \Config\Services::session()
         ];
 
 
@@ -54,7 +55,11 @@ class Noticias extends BaseController
 
     public function item($id = NULL)
     {
-        $data = ['noticias' => $this->getNoticias($id),];
+        $data = [
+            'session' => \Config\Services::session(),
+            'noticias' => $this->getNoticias($id),
+        ];
+
 
         if (empty($data['noticias'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Não é possivel encontrar a noticia com o ID: ' . $id);
@@ -70,6 +75,14 @@ class Noticias extends BaseController
 
     public function inserir()
     {
+        $data['session'] = \Config\Services::session();
+
+        if(!$data['session']->get('logged_in')){
+            return redirect('login');
+        }
+
+
+
         helper('form'); //regras de formulário estão aqui
         $data = ['title' => 'Inserir Notícias'];
 
@@ -81,8 +94,13 @@ class Noticias extends BaseController
     {
         $data = [
             'title' => 'Editar Notícias',
-            'noticias' => $this->getNoticias($id)
+            'noticias' => $this->getNoticias($id),
+            'session' => \Config\Services::session()
         ];
+
+        if(!$data['session']->get('logged_in')){
+            return redirect('login');
+        }
 
         if (empty($data['noticias'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Não é possivel encontrar a noticia com o ID: ' . $id);
@@ -98,6 +116,12 @@ class Noticias extends BaseController
 
     public function gravar($edit_id = null)
     {
+        $data['session'] = \Config\Services::session();
+
+        if(!$data['session']->get('logged_in')){
+            return redirect('login');
+        }
+
         helper('form');
 
         if (
@@ -126,6 +150,11 @@ class Noticias extends BaseController
         }
     }
     public function excluir($id = NULL){
+        $data['session'] = \Config\Services::session();
+
+        if(!$data['session']->get('logged_in')){
+            return redirect('login');
+        }
         
         $this->model->delete($id);
 
@@ -133,7 +162,11 @@ class Noticias extends BaseController
     
     }
 
-
+    public function logout(){
+        $data['session'] = \Config\Services::session();
+        $data['session']->destroy();
+        return redirect('login');
+    }
 
 
 }

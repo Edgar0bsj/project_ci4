@@ -17,7 +17,9 @@ class Usuarios extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Login'
+            'title' => 'Login',
+            'session' => \Config\Services::session()
+
         ];
 
         echo view('templates/header', $data);
@@ -39,10 +41,17 @@ class Usuarios extends BaseController
         $senha = $this->request->getVar('senha');
 
         $data['usuarios'] = $this->getUsuarios($user,$senha);
+        $data['session'] = \Config\Services::session();
 
         if (empty($data['usuarios'])) {
             return redirect('login');
         }else {
+            $sessionData = [
+                'user' => $user,
+                'logged_in' => TRUE //variavel que vai dizer se esta logado ou não
+            ];
+            $data['session']->set($sessionData);
+
             return redirect('noticias');
         }
     }
