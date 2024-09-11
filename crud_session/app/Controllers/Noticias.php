@@ -64,6 +64,7 @@ class Noticias extends BaseController
         echo view('templates/header', $data);
         echo view('pages/noticia', $data);
         echo view('templates/footer');
+
     }
 
 
@@ -76,8 +77,26 @@ class Noticias extends BaseController
         echo view('pages/noticias_gravar');
         echo view('templates/footer');
     }
+    public function editar($id = NULL)
+    {
+        $data = [
+            'title' => 'Editar Notícias',
+            'noticias' => $this->getNoticias($id)
+        ];
 
-    public function gravar()
+        if (empty($data['noticias'])) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Não é possivel encontrar a noticia com o ID: ' . $id);
+        }
+
+        echo view('templates/header', $data);
+        echo view('pages/noticias_gravar', $data);
+        echo view('templates/footer');
+
+    }
+
+
+
+    public function gravar($edit_id = null)
     {
         helper('form');
 
@@ -96,6 +115,7 @@ class Noticias extends BaseController
                 'descricao' => $this->request->getVar('descricao'),
             ]);
 
+
             return redirect('noticias');
 
         } else {
@@ -104,6 +124,16 @@ class Noticias extends BaseController
             echo view('pages/noticias_gravar');
             echo view('templates/footer');
         }
+    }
+
+    public function teste(){
+        $data = [
+            'id' => $this->request->getVar('id'),
+            'titulo' => $this->request->getVar('titulo'),
+            'autor' => $this->request->getVar('autor'),
+            'descricao' => $this->request->getVar('descricao'),
+        ];
+        dd($data);
     }
 
 

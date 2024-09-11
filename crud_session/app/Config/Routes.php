@@ -18,6 +18,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->match(['get','post'],'noticias/inserir', 'Noticias::inserir');
 $routes->match(['get','post'],'noticias/gravar', 'Noticias::gravar');
+// $routes->match(['get','post'],'noticias/gravar', 'Noticias::teste');
+$routes->match(['get','post'],'noticias/editar/(:num)', 'Noticias::editar/$1');
 $routes->get('noticias', 'Noticias::index');
 $routes->get('noticias/(:segment)', 'Noticias::item/$1');
 $routes->get('/', 'Pages::mostrar');
