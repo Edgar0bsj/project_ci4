@@ -1,7 +1,7 @@
 <div class="container">
 
     <?php if($session->get('logged_in')):?>
-    <a href="<?= '/noticias/inserir' ?>" class="btn btn-primary">Adicionar Notícias</a>
+    <a href="<?= route_to('noticias/inserir') ?>" class="btn btn-primary">Adicionar Notícias</a>
     <?php endif?>
 
     <?php if (!empty($noticias) && is_array($noticias)):?>

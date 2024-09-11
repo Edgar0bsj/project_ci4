@@ -75,16 +75,17 @@ class Noticias extends BaseController
 
     public function inserir()
     {
-        $data['session'] = \Config\Services::session();
+        helper('form'); //regras de formulário estão aqui
 
-        if(!$data['session']->get('logged_in')){
+        $data = [
+            'session' => \Config\Services::session(),
+            'title' => 'Inserir Notícias',
+        ];
+
+
+        if (!$data['session']->get('logged_in')) {
             return redirect('login');
         }
-
-
-
-        helper('form'); //regras de formulário estão aqui
-        $data = ['title' => 'Inserir Notícias'];
 
         echo view('templates/header', $data);
         echo view('pages/noticias_gravar');
@@ -98,7 +99,7 @@ class Noticias extends BaseController
             'session' => \Config\Services::session()
         ];
 
-        if(!$data['session']->get('logged_in')){
+        if (!$data['session']->get('logged_in')) {
             return redirect('login');
         }
 
@@ -118,7 +119,7 @@ class Noticias extends BaseController
     {
         $data['session'] = \Config\Services::session();
 
-        if(!$data['session']->get('logged_in')){
+        if (!$data['session']->get('logged_in')) {
             return redirect('login');
         }
 
@@ -131,16 +132,50 @@ class Noticias extends BaseController
                 'descricao' => ['label' => 'Descrição', 'rules' => 'required|min_length[3]']
             ])
         ) {
+            $id = $this->request->getVar('id');
+            $titulo = $this->request->getVar('titulo');
+            $autor = $this->request->getVar('autor');
+            $descricao = $this->request->getVar('descricao');
+            $img = $this->request->getFile('img');
 
-            $this->model->save([
-                'id' => $this->request->getVar('id'),
-                'titulo' => $this->request->getVar('titulo'),
-                'autor' => $this->request->getVar('autor'),
-                'descricao' => $this->request->getVar('descricao'),
-            ]);
+            if (!$img->isValid()) {
+                $this->model->save([
+                    'id' => $id,
+                    'titulo' => $titulo,
+                    'autor' => $autor,
+                    'descricao' => $descricao,
+                ]);
+                return redirect('noticias');
+            }
+            else {
+                $validaIMG = $this->validate([
+                    'img' => [
+                        'uploaded[img]',
+                        'mime_in[img,imagem/jpg,image/jpeg,image/gif,image/png]',
+                    ],
+                ]);
+                if ($validaIMG) {
+                    $novoNome = $img->getRandomName();
+                    $img->move('img/noticias',$novoNome);
+                    
+                    $this->model->save([
+                        'id' => $id,
+                        'titulo' => $titulo,
+                        'autor' => $autor,
+                        'descricao' => $descricao,
+                        'img' => $novoNome,
+                    ]);
+                    return redirect('noticias');
+                } else {
+                    $data['title'] = 'Erro ao Gravar a Notícia';
+                    echo view('templates/header', $data);
+                    echo view('pages/noticias_gravar');
+                    echo view('templates/footer');
+                }
+            }
 
 
-            return redirect('noticias');
+
 
         } else {
             $data['title'] = 'Erro ao Gravar a Notícia';
@@ -149,20 +184,22 @@ class Noticias extends BaseController
             echo view('templates/footer');
         }
     }
-    public function excluir($id = NULL){
+    public function excluir($id = NULL)
+    {
         $data['session'] = \Config\Services::session();
 
-        if(!$data['session']->get('logged_in')){
+        if (!$data['session']->get('logged_in')) {
             return redirect('login');
         }
-        
+
         $this->model->delete($id);
 
         return redirect('noticias');
-    
+
     }
 
-    public function logout(){
+    public function logout()
+    {
         $data['session'] = \Config\Services::session();
         $data['session']->destroy();
         return redirect('login');

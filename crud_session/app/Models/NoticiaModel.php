@@ -16,7 +16,7 @@ class NoticiaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = true;  // <-- deletar com segurança
     protected $protectFields    = true;
-    protected $allowedFields    = ['titulo','descricao','autor'];   // <---- compos que podem sofrer edição
+    protected $allowedFields    = ['titulo','descricao','autor','img'];   // <---- compos que podem sofrer edição
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
