@@ -1,11 +1,19 @@
 <div class="container">
 
-    <?php if($session->get('logged_in')):?>
+    <?php if($session->get('logged_in')): //recuperando dados da sessão->logged_in?>
     <a href="<?= route_to('noticias/inserir') ?>" class="btn btn-primary">Adicionar Notícias</a>
     <?php endif?>
 
-    <?php if (!empty($noticias) && is_array($noticias)):?>
-        <?php foreach($noticias as $noticias_item): ?>
+    <?php 
+    //condição na qual as duas informaçoes tem que ser TRUE
+    //1ª se a variavel noticias esta vazia
+    //2ª se a variavel noticias é um array
+    if (!empty($noticias) && is_array($noticias)):
+    ?>
+        <?php 
+        //percorre o array noticias trazendo item por item
+        foreach($noticias as $noticias_item):
+        ?>
             <div class="card my-5">
                 <div class="card-body">
                     <h3><?= $noticias_item['titulo'] ?></h3>

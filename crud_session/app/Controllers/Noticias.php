@@ -28,20 +28,6 @@ class Noticias extends BaseController
         echo view('templates/footer');
     }
 
-    /**
-     * --------------------------------------------------------------------------
-     * getNoticias lógica
-     * --------------------------------------------------------------------------
-     *   asArray(): Converte o resultado em um array em vez de um objeto.
-     *
-     *   where(['id' => $id]): Adiciona uma condição WHERE que filtra os registros onde o campo id é igual ao valor da  *   variável $id.
-     *
-     *   first(): Retorna o primeiro resultado encontrado.
-     *
-     *   findAll(): Busca todos os registros.
-     *   findAll($limite, $offset): Busca um número limitado de registros a partir de um ponto específico.
-     *
-     **/
     protected function getNoticias($id = false)
     {
         if ($id === false) {
@@ -71,7 +57,6 @@ class Noticias extends BaseController
         echo view('templates/footer');
 
     }
-
 
     public function inserir()
     {
@@ -112,8 +97,6 @@ class Noticias extends BaseController
         echo view('templates/footer');
 
     }
-
-
 
     public function gravar($edit_id = null)
     {

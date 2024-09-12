@@ -16,7 +16,7 @@
                 <h1><?= $title ?></h1>
             </div>
             <div class="col-md-3">
-                <?php if ($session->get('logged_in')): ?>
+                <?php if ($session->get('logged_in')): //recuperando dados da sessão->logged_in?>
                     <p>Bem vindo ao sistema, <?= $session->get('user')?> ! <a href="<?= route_to('logout')?>">Sair</a></p>
                 <?php else: ?>
                     <a href="<?= route_to('login')?>" class="btn btn-primary">Entrar no Sistema</a>

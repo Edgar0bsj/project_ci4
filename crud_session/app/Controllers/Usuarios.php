@@ -36,24 +36,37 @@ class Usuarios extends BaseController
 
     }
 
-    public function login(){
+    public function login()
+    {
+        // capturando dados do usuario
         $user = $this->request->getVar('user');
         $senha = $this->request->getVar('senha');
+        // -----------------------------
 
-        $data['usuarios'] = $this->getUsuarios($user,$senha);
-        $data['session'] = \Config\Services::session();
 
-        if (empty($data['usuarios'])) {
+        // Criando variaveis de acesso
+        $data['usuarios'] = $this->getUsuarios($user, $senha); // saida:array(id,user,senha)
+        $data['session'] = \Config\Services::session();  // saida: array( vazio )
+        // -----------------------------
+
+
+
+        // verificando se na variável usuario voltou com informacoes do banco de dados
+        if (empty($data['usuarios'])) { //se estiver vazio = TRUE
             return redirect('login');
-        }else {
-            $sessionData = [
+
+        } else {  // se volta com os dados [id, user, senha]
+
+            $sessionData = [  //variável que irá receber as informaçoes da sessão
                 'user' => $user,
-                'logged_in' => TRUE //variavel que vai dizer se esta logado ou não
+                'logged_in' => TRUE 
             ];
-            $data['session']->set($sessionData);
+
+            $data['session']->set($sessionData);  //startando a sessão
 
             return redirect('noticias');
         }
+        // -----------------------------
     }
 
 }
